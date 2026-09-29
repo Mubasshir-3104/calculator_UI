@@ -1,4 +1,3 @@
-```js
 export const SERVICES = {
   add: {
     name: "Addition",
@@ -31,8 +30,7 @@ export const SERVICES = {
   modulo: {
     name: "Modulo",
     symbol: "%",
-    baseUrl: "YOUR_MODULO_RAILWAY_HTTPS_URL",
+    baseUrl: "YOUR_MODULO_RAILWAY_URL",
     path: "modulo"
-  },
+  }
 };
-```
