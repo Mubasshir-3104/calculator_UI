@@ -20,12 +20,7 @@ export const SERVICES = {
     path: "multiply"
   },
 
-  divide: {
-    name: "Division",
-    symbol: "÷",
-    baseUrl: "https://harmonious-reverence-production-deac.up.railway.app",
-    path: "divide"
-  },
+  divide: { name: "Division", symbol: "÷", baseUrl: "https://harmonious-reverence-production-deac.up.railway.app", path: "divide" },
 
   modulo: {
     name: "Modulo",
