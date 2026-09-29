@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* Modern interactive background with subtle ambient glow */
+body {
+  margin: 0;
+  background-color: #070b14;
+  background-image:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(56, 189, 248, 0.1) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(168, 85, 247, 0.08) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(16, 185, 129, 0.06) 0%,
+      transparent 40%
+    );
+  background-attachment: fixed;
+  color: #f8fafc;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphic Calculator Card */
+.w-full.max-w-md {
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.7),
+    0 0 35px rgba(56, 189, 248, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top illuminated border glow */
+.w-full.max-w-md::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #a855f7,
+    #ec4899,
+    #10b981,
+    #f59e0b
+  );
+  opacity: 0.85;
+}
+
+/* Vibrant Gradient Title */
+h1 {
+  background: linear-gradient(135deg, #ffffff 40%, #bae6fd 80%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+/* Interactive Number Inputs */
+input {
+  background: rgba(2, 6, 23, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+input:focus {
+  border-color: #38bdf8 !important;
+  box-shadow:
+    0 0 0 3px rgba(56, 189, 248, 0.2),
+    0 0 15px rgba(56, 189, 248, 0.15) !important;
+  background: rgba(2, 6, 23, 0.98) !important;
+}
+
+input::placeholder {
+  color: #475569;
+}
+
+/* Interactive Operation Buttons with distinct signature color combination */
+.grid-cols-5 button {
+  scale: 1;
+  transition:
+    scale 0.15s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.grid-cols-5 button:active:not(:disabled) {
+  scale: 0.92;
+}
+
+/* 1. Addition (+) - Sky Cyan */
+.grid-cols-5 button:nth-child(1) {
+  background: rgba(56, 189, 248, 0.1) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+.grid-cols-5 button:nth-child(1):hover:not(:disabled) {
+  background: #38bdf8 !important;
+  color: #020617 !important;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5) !important;
+  border-color: #38bdf8 !important;
+}
+
+/* 2. Subtraction (−) - Neon Purple */
+.grid-cols-5 button:nth-child(2) {
+  background: rgba(168, 85, 247, 0.1) !important;
+  color: #a855f7 !important;
+  border: 1px solid rgba(168, 85, 247, 0.25) !important;
+}
+.grid-cols-5 button:nth-child(2):hover:not(:disabled) {
+  background: #a855f7 !important;
+  color: #020617 !important;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5) !important;
+  border-color: #a855f7 !important;
+}
+
+/* 3. Multiplication (×) - Vibrant Pink */
+.grid-cols-5 button:nth-child(3) {
+  background: rgba(236, 72, 153, 0.1) !important;
+  color: #ec4899 !important;
+  border: 1px solid rgba(236, 72, 153, 0.25) !important;
+}
+.grid-cols-5 button:nth-child(3):hover:not(:disabled) {
+  background: #ec4899 !important;
+  color: #020617 !important;
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.5) !important;
+  border-color: #ec4899 !important;
+}
+
+/* 4. Division (÷) - Neon Emerald */
+.grid-cols-5 button:nth-child(4) {
+  background: rgba(16, 185, 129, 0.1) !important;
+  color: #10b981 !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+.grid-cols-5 button:nth-child(4):hover:not(:disabled) {
+  background: #10b981 !important;
+  color: #020617 !important;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5) !important;
+  border-color: #10b981 !important;
+}
+
+/* 5. Modulo (%) - Neon Amber */
+.grid-cols-5 button:nth-child(5) {
+  background: rgba(245, 158, 11, 0.1) !important;
+  color: #f59e0b !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+.grid-cols-5 button:nth-child(5):hover:not(:disabled) {
+  background: #f59e0b !important;
+  color: #020617 !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.5) !important;
+  border-color: #f59e0b !important;
+}
+
+/* Result Display Screen */
+.min-h-16 {
+  background: rgba(2, 6, 23, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.min-h-16 span.font-bold {
+  color: #38bdf8;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Tactile Clear Button */
+.w-full.max-w-md > button:last-child {
+  scale: 1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    scale 0.15s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.w-full.max-w-md > button:last-child:hover {
+  background: rgba(244, 63, 94, 0.12) !important;
+  border-color: rgba(244, 63, 94, 0.3) !important;
+  color: #fda4af !important;
+}
+
+.w-full.max-w-md > button:last-child:active {
+  scale: 0.97;
+}
