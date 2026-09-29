@@ -20,7 +20,7 @@ export async function calculate(operation, a, b) {
   const x = parseInteger(a, "Number 1");
   const y = parseInteger(b, "Number 2");
 
-  const url = `http://localhost:${service.port}/api/${service.path}/${x}/${y}`;
+    const url = `${service.baseUrl}/api/${service.path}/${x}/${y}`;
 
   let response;
   try {
